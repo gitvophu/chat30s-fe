@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+
+    .cvs-list {
+        flex: 1;
+        display: flex;
+
+        .me {
+            display: flex;
+            align-items: center;
+
+            .my-avatar {
+                width: 50px;
+                max-width: 100%;
+                border-radius: 50%;
+            }
+
+            .my-name {
+                margin-left: 5px;
+                ;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+
+        .menu {
+            list-style: none;
+
+            li {
+                display: inline-flex;
+                margin-left: 10px;
+                background-color: #f5f5f5;
+                padding: 5px;
+                border-radius: 50%;
+            }
+        }
+
+    }
+
+    .cvs-content {
+        flex: 3;
+    }
+}
