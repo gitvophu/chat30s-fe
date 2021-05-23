@@ -5,7 +5,7 @@ import messenger_demo from './../../../assets/img/messenger_demo.png';
 const LoginLayout = ({ form }) => {
     console.log(form);
     return (
-        <div className="container">
+        <div className="LoginLayout__container">
             <div className="header">
                 <div className="logo">
                     <img src={logo} alt="" />
