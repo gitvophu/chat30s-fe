@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import avatar from './../../assets/img/avatar.jpg';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import CreateIcon from '@material-ui/icons/Create';
 import SendIcon from '@material-ui/icons/Send';
 import './style.scss';
+import { io } from "socket.io-client";
 const Chat = () => {
+    useEffect(() => {
+        console.log(io);
+        const socket = io("http://localhost:4000");
+    }, [])
     return (
         <div className="Chat__container">
             <div className="cvs-list">
