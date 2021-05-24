@@ -3,6 +3,7 @@ import avatar from './../../assets/img/avatar.jpg';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import CreateIcon from '@material-ui/icons/Create';
+import SendIcon from '@material-ui/icons/Send';
 import './style.scss';
 const Chat = () => {
     return (
@@ -78,6 +79,12 @@ const Chat = () => {
                         <img className="message-avatar" src={avatar} alt="" />
                     </div>
                     <div></div>
+                </div>
+                <div className="cvs-content__form">
+                    <input type="text" className="message-input" />
+                    <button className="send-btn">
+                        <SendIcon color="primary" className="send-btn-icon" />
+                    </button>
                 </div>
             </div>
         </div>

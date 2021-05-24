@@ -128,6 +128,8 @@
 
     .cvs-content {
         flex: 3;
+        display: flex;
+        flex-direction: column;
 
         .cvs-content__header {
             padding: 10px;
@@ -150,6 +152,7 @@
 
         .cvs-content__content {
             padding: 10px;
+            flex: 1;
 
             .left-message,
             .right-message {
@@ -187,6 +190,38 @@
                 }
             }
 
+        }
+
+        .cvs-content__form {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #e5e5e5;
+
+
+            .message-input,
+            .message-input:focus {
+                flex: 1;
+                background-color: #f3f3f5;
+                border: none;
+                outline: none;
+                border-radius: 15px;
+                box-sizing: border-box;
+                padding: 10px;
+                ;
+            }
+
+            .send-btn,
+            .send-btn:focus,
+            .send-btn:active {
+                border: none;
+                outline: none;
+                background: none;
+                cursor: pointer;
+
+                .send-btn-icon {
+                    color: #0099ff;
+                }
+            }
         }
     }
 }
