@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import avatar from './../../assets/img/avatar.jpg';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import CreateIcon from '@material-ui/icons/Create';
-import SendIcon from '@material-ui/icons/Send';
 import './style.scss';
-import { io } from "socket.io-client";
+import socket from './../../socket';
+import ChatForm from './components/ChatForm';
+import ConversationList from './components/ConversationList';
+import MessageList from './components/MessageList';
 const Chat = () => {
     useEffect(() => {
-        console.log(io);
-        const socket = io("http://localhost:4000");
+
     }, [])
+
     return (
         <div className="Chat__container">
             <div className="cvs-list">
@@ -36,61 +38,15 @@ const Chat = () => {
                         <input type="text" placeholder="Tìm kiếm trên Messenger" />
                     </form>
                 </div>
-                <ul className="cvs-list__items">
-                    <li className="cvs-list__item">
-                        <div className="thumbnail">
-                            <img src={avatar} alt="" />
-                            <div className="status"></div>
-                        </div>
-                        <div className="cvs-list__item__info">
-                            <div className="cvs-list__item__info__name">Mr. Adam</div>
-                            <div className="cvs-list__item__info__last-msg">Hi. Good morning</div>
-                        </div>
-                    </li>
-                    <li className="cvs-list__item">
-                        <div className="thumbnail">
-                            <img src={avatar} alt="" />
-                            <div className="status"></div>
-                        </div>
-                        <div className="cvs-list__item__info">
-                            <div className="cvs-list__item__info__name">Mr. Ben</div>
-                            <div className="cvs-list__item__info__last-msg">Hi. Good morning</div>
-                        </div>
-                    </li>
-                    <li className="cvs-list__item">
-                        <div className="thumbnail">
-                            <img src={avatar} alt="" />
-                            <div className="status"></div>
-                        </div>
-                        <div className="cvs-list__item__info">
-                            <div className="cvs-list__item__info__name">Mr. Canna</div>
-                            <div className="cvs-list__item__info__last-msg">Hi. Good morning</div>
-                        </div>
-                    </li>
-                </ul>
+                <ConversationList />
             </div>
             <div className="cvs-content">
                 <div className="cvs-content__header">
                     <img className="cvs-content__header__avatar" src={avatar} alt="" />
                     <span className="cvs-content__header__name">Mr. Adam</span>
                 </div>
-                <div className="cvs-content__content">
-                    <div class="left-message">
-                        <img className="message-avatar" src={avatar} alt="" />
-                        <div className="message">Hi. How are you?</div>
-                    </div>
-                    <div class="right-message">
-                        <div className="message">Hi. I'm fine!!</div>
-                        <img className="message-avatar" src={avatar} alt="" />
-                    </div>
-                    <div></div>
-                </div>
-                <div className="cvs-content__form">
-                    <input type="text" className="message-input" />
-                    <button className="send-btn">
-                        <SendIcon color="primary" className="send-btn-icon" />
-                    </button>
-                </div>
+                <MessageList />
+                <ChatForm />
             </div>
         </div>
     )

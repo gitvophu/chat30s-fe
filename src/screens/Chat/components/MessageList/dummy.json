@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "user": {
+            "name": "Steve"
+        },
+        "message": "Hi. My name is Steve. Nice to meet you.",
+        "align": "left"
+    },
+    {
+        "id":2,
+        "user": {
+            "name": "John"
+        },
+        "message": "Hello. I'm John.",
+        "align": "right"
+    }
+]

@@ -181,7 +181,8 @@
             }
 
             .right-message {
-                justify-content: flex-end;
+                flex-direction: row-reverse;
+                justify-content: flex-start;
 
                 .message {
                     background: #0099ff;
