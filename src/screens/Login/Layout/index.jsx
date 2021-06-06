@@ -3,7 +3,6 @@ import './style.scss';
 import logo from './../../../assets/img/messenger.png';
 import messenger_demo from './../../../assets/img/messenger_demo.png';
 const LoginLayout = ({ form }) => {
-    console.log(form);
     return (
         <div className="LoginLayout__container">
             <div className="header">
@@ -12,10 +11,10 @@ const LoginLayout = ({ form }) => {
                 </div>
                 <div className="menu">
                     <ul className="menu__list">
-                        <li><a href="#">Phòng họp mặt</a></li>
-                        <li><a href="#">Tính năng</a></li>
-                        <li><a href="#">Quyền riêng tư & an toàn</a></li>
-                        <li><a href="#">Dành cho nhà phát triển</a></li>
+                        <li><a href="#/">Phòng họp mặt</a></li>
+                        <li><a href="#/">Tính năng</a></li>
+                        <li><a href="#/">Quyền riêng tư & an toàn</a></li>
+                        <li><a href="#/">Dành cho nhà phát triển</a></li>
                     </ul>
                 </div>
 
@@ -39,8 +38,8 @@ const LoginLayout = ({ form }) => {
                 <div className="footer__copyright">© Facebook 2021.
 Logo của Apple và Google Play là nhãn hiệu hàng hóa thuộc chủ sở hữu tương ứng.</div>
                 <ul className="footer__chinhsach">
-                    <li><a href="#">Chính sách dữ liệu</a></li>
-                    <li><a href="#">Điều khoản</a></li>
+                    <li><a href="#/">Chính sách dữ liệu</a></li>
+                    <li><a href="#/">Điều khoản</a></li>
                 </ul>
             </footer>
         </div>
